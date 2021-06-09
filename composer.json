@@ -1,0 +1,24 @@
+{
+    "name": "zamasskin/html-constructor",
+    "description": "\"Html engine components\"",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Zamasskin",
+            "email": "zamasskin@yandex.ru"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.5.x-dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "HtmlConstructor": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
