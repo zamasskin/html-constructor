@@ -1,6 +1,6 @@
 {
     "name": "zamasskin/html-constructor",
-    "description": "\"Html engine components\"",
+    "description": "Html engine components",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -20,6 +20,6 @@
             "HtmlConstructor": "src/"
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
