@@ -14,6 +14,7 @@ class TagTest extends TestCase {
             ]);
         $render = '<div style="color: red; background: #000" class="parent"><div class="one"></div><div class="two"></div></div>';
         $this->assertSame($html->render(), $render);
+        $this->assertSame((new Tags\TextContent\Div())->render(), Tags::Div()->render());
     }
 
     public function testImgTag() {
@@ -28,6 +29,11 @@ class TagTest extends TestCase {
         $this->assertSame(
             (new Tags\ImageAndMultimedia\Img($src, $alt))->render(),
             $render
+        );
+
+        $this->assertSame(
+            (new Tags\ImageAndMultimedia\Img($src, $alt))->render(),
+            Tags::Img($src, $alt)->render()
         );
     }
 
@@ -44,6 +50,11 @@ class TagTest extends TestCase {
             (new Tags\Metadata\Base($href))->target($target)->render(),
             $render
         );
+
+        $this->assertSame(
+            (new Tags\Metadata\Base($href))->render(),
+            Tags::Base($href)->render()
+        );
     }
 
     public function testLinkTag() {
@@ -58,6 +69,11 @@ class TagTest extends TestCase {
         $this->assertSame(
             (new Tags\Metadata\Link($href, $rel))->render(),
             $render
+        );
+
+        $this->assertSame(
+            (new Tags\Metadata\Link($href, $rel))->render(),
+            Tags::Link($href, $rel)->render()
         );
     }
 }
