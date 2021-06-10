@@ -48,4 +48,10 @@ class TextContentTest extends TestCase {
         $this->assertSame((new Tags\TextContent\Dt())->render(), $render);
         $this->assertSame((new Tags\TextContent\Dt())->render(), Tags::Dt()->render());
     }
+
+    public function testFigure() {
+        $render = '<figure></figure>';
+        $this->assertSame((new Tags\TextContent\Figure())->render(), $render);
+        $this->assertSame((new Tags\TextContent\Figure())->render(), Tags::Figure()->render());
+    }
 }

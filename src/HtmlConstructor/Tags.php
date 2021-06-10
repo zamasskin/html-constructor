@@ -123,6 +123,10 @@ class Tags {
         return new HtmlTags\TextContent\Figcaption();
     }
 
+    static function Figure() {
+        return new HtmlTags\TextContent\Figure();
+    }
+
     // ImageAndMultimedia
 
     static function Img($src = false, $alt = false) {
