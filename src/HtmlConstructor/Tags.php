@@ -39,6 +39,12 @@ class Tags {
         return new HtmlTags\Metadata\Title();
     }
 
+    // ContentSectioning
+
+    static function Address() {
+        return new HtmlTags\ContentSectioning\Address();
+    }
+
     // TextContent
 
     static function Div() {

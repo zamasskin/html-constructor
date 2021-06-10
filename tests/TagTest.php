@@ -32,6 +32,18 @@ class TagTest extends TestCase {
         );
     }
 
+    public function testAddress() {
+        $render = '<address></address>';
+        $this->assertSame(
+            (new Tags\ContentSectioning\Address())->render(),
+            $render
+        );
+        $this->assertSame(
+            (new Tags\ContentSectioning\Address())->render(),
+            Tags::Address()->render()
+        );
+    }
+
 
     public function testDivTag() {
         $html = (new Tags\TextContent\Div())
