@@ -1,8 +1,10 @@
 <?php
 
-namespace HtmlConstructor;
+namespace HtmlConstructor\Traits;
 
-trait StructTag {
+use HtmlConstructor\BaseTag;
+
+trait Struct {
     /**
      * Set children
      * @param BaseTag|BaseTag[] $children

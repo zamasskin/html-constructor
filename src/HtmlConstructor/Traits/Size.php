@@ -1,8 +1,8 @@
 <?php
 
-namespace HtmlConstructor;
+namespace HtmlConstructor\Traits;
 
-trait SizeTag {
+trait Size {
     /**
      * Set width
      * @param int|string $width

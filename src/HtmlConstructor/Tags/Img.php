@@ -1,6 +1,10 @@
 <?php
 
-namespace HtmlConstructor;
+namespace HtmlConstructor\Tags;
+
+use HtmlConstructor\BaseTag;
+use HtmlConstructor\Tag;
+use HtmlConstructor\Traits\Size;
 
 class Img extends BaseTag implements Tag {
     const CROSSORIGIN_ANONYMOUS = "anonymous";
@@ -27,7 +31,7 @@ class Img extends BaseTag implements Tag {
     const ALIGN_LEFT = "left";
     const ALIGN_RIGHT = "right";
 
-    use SizeTag;
+    use Size;
     /**
      * Img constructor.
      * @param false|string $src

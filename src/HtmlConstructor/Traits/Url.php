@@ -1,8 +1,8 @@
 <?php
 
-namespace HtmlConstructor;
+namespace HtmlConstructor\Traits;
 
-trait UrlTags {
+trait Url {
     static $TARGET_SELF = "_self";
     static $TARGET_BLANK = "_blank";
     static $TARGET_PARENT = "_parent";
