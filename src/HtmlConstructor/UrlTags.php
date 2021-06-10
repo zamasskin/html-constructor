@@ -22,6 +22,7 @@ trait UrlTags {
     }
 
     /**
+     * Set href attribute
      * @param string $href
      * @return $this
      */
@@ -31,6 +32,7 @@ trait UrlTags {
     }
 
     /**
+     * Set target attribute
      * @param self::TARGET_*|string $target
      * @return $this
      */
