@@ -5,24 +5,13 @@ namespace HtmlConstructor\Tags;
 use HtmlConstructor\BaseTag;
 use HtmlConstructor\Tag;
 use HtmlConstructor\Traits\Size;
+use HtmlConstructor\Traits\Download;
 
 class Img extends BaseTag implements Tag {
-    static $CROSSORIGIN_ANONYMOUS = "anonymous";
-    static $CROSSORIGIN_USE_CREDENTIALS = "use-credentials";
 
     static $DECODING_SYNC = "sync";
     static $DECODING_ASYNC = "async";
     static $DECODING_AUTO = "auto";
-
-    static $IMPORTANCE_AUTO = "auto";
-    static $IMPORTANCE_HIGH = "high";
-    static $IMPORTANCE_LOW = "low";
-
-    static $REFERRERPOLICY_NO_REFERRER = "no-referrer";
-    static $REFERRERPOLICY_NO_REFERRER_WHEN_DOWNGRADE = "no-referrer-when-downgrade";
-    static $REFERRERPOLICY_ORIGIN = "origin";
-    static $REFERRERPOLICY_ORIGIN_WHEN_CROSS_ORIGIN = "origin-when-cross-origin";
-    static $REFERRERPOLICY_UNSAFE_URL = "unsafe-url";
 
 
     static $ALIGN_TOP = "top";
@@ -32,6 +21,7 @@ class Img extends BaseTag implements Tag {
     static $ALIGN_RIGHT = "right";
 
     use Size;
+    use Download;
     /**
      * Img constructor.
      * @param false|string $src
@@ -75,16 +65,6 @@ class Img extends BaseTag implements Tag {
         return $this;
     }
 
-    /**
-     * Set crossorigin attribute
-     * @param self::$CROSSORIGIN_*|string $crossorigin
-     * @return $this
-     */
-    function crossorigin($crossorigin) {
-        $this->arParams["attributes"]["crossorigin"] = $crossorigin;
-        return $this;
-    }
-
 
     /**
      * Set decoding attribute
@@ -96,15 +76,6 @@ class Img extends BaseTag implements Tag {
         return $this;
     }
 
-    /**
-     * Set importance attribute
-     * @param self::$IMPORTANCE_*|string $importance
-     * @return $this
-     */
-    function importance($importance) {
-        $this->arParams["attributes"]["importance"] = $importance;
-        return $this;
-    }
 
     /**
      * Set intrinsicsize attribute
@@ -124,16 +95,6 @@ class Img extends BaseTag implements Tag {
     function ismap(bool $ismap) {
         $ismap = (gettype($ismap) == "boolean" && $ismap) || $ismap == "true" || intval($ismap) == 1;
         $this->arParams["attributes"]["ismap"] = $ismap ? "true" : "false";
-        return $this;
-    }
-
-    /**
-     * Set referrerpolicy attribute
-     * @param self::$REFERRERPOLICY_*|string $referrerpolicy
-     * @return $this
-     */
-    function referrerpolicy($referrerpolicy) {
-        $this->arParams["attributes"]["intrinsicsize"] = $referrerpolicy;
         return $this;
     }
 
