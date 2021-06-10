@@ -135,6 +135,10 @@ class Tags {
         return new HtmlTags\TextContent\Li($value, $contains);
     }
 
+    static function Ol($value = false, $contains = false) {
+        return new HtmlTags\TextContent\Ol($value, $contains);
+    }
+
     // ImageAndMultimedia
 
     static function Img($src = false, $alt = false) {
