@@ -139,6 +139,10 @@ class Tags {
         return new HtmlTags\TextContent\Ol($value, $contains);
     }
 
+    static function P($contains = false) {
+        return new HtmlTags\TextContent\P($contains);
+    }
+
     // ImageAndMultimedia
 
     static function Img($src = false, $alt = false) {

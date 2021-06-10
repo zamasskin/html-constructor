@@ -78,4 +78,12 @@ class TextContentTest extends TestCase {
         $this->assertSame((new Tags\TextContent\Ol($value, $contains))->render(), $render);
         $this->assertSame((new Tags\TextContent\Ol($value, $contains))->render(), Tags::Ol($value, $contains)->render());
     }
+
+    public function testP() {
+        $contains = "test contains";
+        $render = sprintf('<p>%s</p>', $contains);
+        $this->assertSame((new Tags\TextContent\P())->contains($contains)->render(), $render);
+        $this->assertSame((new Tags\TextContent\P($contains))->render(), $render);
+        $this->assertSame((new Tags\TextContent\P($contains))->render(), Tags::P($contains)->render());
+    }
 }
