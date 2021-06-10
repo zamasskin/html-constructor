@@ -7,11 +7,15 @@ use HtmlConstructor\BaseTag;
 trait Struct {
     /**
      * Set children
-     * @param BaseTag|BaseTag[] $children
+     * @param BaseTag|BaseTag[]|string $children
      * @return $this
      */
     function children($children) {
-        $this->arParams["children"] = is_array($children) ? $children : [$children];
+        if(gettype($children) === "string") {
+            $this->arParams["contains"] = $children;
+        } else {
+            $this->arParams["children"] = is_array($children) ? $children : [$children];
+        }
         return $this;
     }
 
@@ -31,6 +35,8 @@ trait Struct {
             foreach ($this->arParams["children"] as $child) {
                 $children[] = $child->render();
             }
+        } elseif ($this->arParams["contains"]) {
+            $children[] = $this->arParams["contains"];
         }
 
         return implode("", [
