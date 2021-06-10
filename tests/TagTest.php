@@ -15,4 +15,19 @@ class TagTest extends TestCase {
         $render = '<div style="color: red; background: #000" class="parent"><div class="one"></div><div class="two"></div></div>';
         $this->assertSame($html->render(), $render);
     }
+
+    public function testImg() {
+        $src ="test.png";
+        $alt = "test";
+        $render = '<img src="test.png" alt="test" />';
+
+        $this->assertSame(
+            (new Tags\Img())->src($src)->alt($alt)->render(),
+            $render
+        );
+        $this->assertSame(
+            (new Tags\Img($src, $alt))->render(),
+            $render
+        );
+    }
 }
