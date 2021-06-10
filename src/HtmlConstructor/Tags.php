@@ -107,6 +107,10 @@ class Tags {
         return new HtmlTags\TextContent\Blockquote($cite);
     }
 
+    static function Dd() {
+        return new HtmlTags\TextContent\Dd();
+    }
+
     // ImageAndMultimedia
 
     static function Img($src = false, $alt = false) {

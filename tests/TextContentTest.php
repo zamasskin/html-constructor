@@ -24,4 +24,11 @@ class TextContentTest extends TestCase {
         $this->assertSame((new Tags\TextContent\Blockquote($cite))->render(), $render);
         $this->assertSame((new Tags\TextContent\Blockquote($cite))->render(), Tags::Blockquote($cite)->render());
     }
+
+    public function testDd() {
+        $cite = 'http://example.com';
+        $render = sprintf('<dd></dd>', $cite);
+        $this->assertSame((new Tags\TextContent\Dd())->render(), $render);
+        $this->assertSame((new Tags\TextContent\Dd())->render(), Tags::Dd()->render());
+    }
 }
