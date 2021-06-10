@@ -26,9 +26,14 @@ class TextContentTest extends TestCase {
     }
 
     public function testDd() {
-        $cite = 'http://example.com';
-        $render = sprintf('<dd></dd>', $cite);
+        $render = '<dd></dd>';
         $this->assertSame((new Tags\TextContent\Dd())->render(), $render);
         $this->assertSame((new Tags\TextContent\Dd())->render(), Tags::Dd()->render());
+    }
+
+    public function testDl() {
+        $render = '<dl></dl>';
+        $this->assertSame((new Tags\TextContent\Dl())->render(), $render);
+        $this->assertSame((new Tags\TextContent\Dl())->render(), Tags::Dl()->render());
     }
 }
