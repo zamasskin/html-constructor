@@ -20,6 +20,15 @@ trait Struct {
     }
 
     /**
+     * @param string $contains
+     * @return $this
+     */
+    function contains($contains) {
+        $this->arParams["contains"] = $contains;
+        return $this;
+    }
+
+    /**
      * Render HTML element
      * @return string HTML string
      */
