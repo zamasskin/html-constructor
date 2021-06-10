@@ -33,7 +33,7 @@ trait Url {
 
     /**
      * Set target attribute
-     * @param self::TARGET_*|string $target
+     * @param self::$TARGET_*|string $target
      * @return $this
      */
     function target($target) {
