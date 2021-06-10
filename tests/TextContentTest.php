@@ -60,4 +60,13 @@ class TextContentTest extends TestCase {
         $this->assertSame((new Tags\TextContent\Hr())->render(), $render);
         $this->assertSame((new Tags\TextContent\Hr())->render(), Tags::Hr()->render());
     }
+
+    public function testLi() {
+        $value = "01";
+        $contains = "one";
+        $render = sprintf('<li value="%s">%s</li>', $value, $contains);
+        $this->assertSame((new Tags\TextContent\Li())->value($value)->contains($contains)->render(), $render);
+        $this->assertSame((new Tags\TextContent\Li($value, $contains))->render(), $render);
+        $this->assertSame((new Tags\TextContent\Li($value, $contains))->render(), Tags::Li($value, $contains)->render());
+    }
 }
