@@ -67,7 +67,7 @@ abstract class BaseTag implements Tag {
      */
     function render() {
         $items = [$this->getName()];
-        if(count($this->arParams["attributes"]) > 0) {
+        if($this->arParams["attributes"] && count($this->arParams["attributes"]) > 0) {
             $items[] = $this->getAttributesString();
         }
         return "<" . implode(" ", $items) . " />";
