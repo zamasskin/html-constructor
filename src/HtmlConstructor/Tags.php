@@ -115,6 +115,10 @@ class Tags {
         return new HtmlTags\TextContent\Dl();
     }
 
+    static function Dt() {
+        return new HtmlTags\TextContent\Dt();
+    }
+
     // ImageAndMultimedia
 
     static function Img($src = false, $alt = false) {

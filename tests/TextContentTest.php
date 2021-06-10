@@ -36,4 +36,10 @@ class TextContentTest extends TestCase {
         $this->assertSame((new Tags\TextContent\Dl())->render(), $render);
         $this->assertSame((new Tags\TextContent\Dl())->render(), Tags::Dl()->render());
     }
+
+    public function testDt() {
+        $render = '<dt></dt>';
+        $this->assertSame((new Tags\TextContent\Dt())->render(), $render);
+        $this->assertSame((new Tags\TextContent\Dt())->render(), Tags::Dt()->render());
+    }
 }
