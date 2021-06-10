@@ -10,9 +10,9 @@ trait Url {
 
     /**
      * UrlTags constructor.
-     * @param string $href
+     * @param false|string $href
      */
-    function __construct($href)
+    function __construct($href = false)
     {
         if(gettype($href) === "string" && strlen($href) > 0) {
             $this->arParams["attributes"]["href"] = $href;
