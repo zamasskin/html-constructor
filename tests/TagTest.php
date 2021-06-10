@@ -45,4 +45,19 @@ class TagTest extends TestCase {
             $render
         );
     }
+
+    public function testLinkTag() {
+        $href = "example.css";
+        $rel = "stylesheet";
+        $render = sprintf('<link href="%s" rel="%s" />', $href, $rel);
+        $this->assertSame(
+            (new Tags\Link())->href($href)->rel($rel)->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\Link($href, $rel))->render(),
+            $render
+        );
+    }
 }
