@@ -103,8 +103,8 @@ class Tags {
         return new HtmlTags\TextContent\Div();
     }
 
-    static function BlockQuote($cite = false) {
-        return new HtmlTags\TextContent\BlockQuote($cite);
+    static function Blockquote($cite = false) {
+        return new HtmlTags\TextContent\Blockquote($cite);
     }
 
     // ImageAndMultimedia

@@ -6,7 +6,7 @@ use HtmlConstructor\BaseTag;
 use HtmlConstructor\Tag;
 use HtmlConstructor\Traits\Struct;
 
-class BlockQuote extends BaseTag implements Tag {
+class Blockquote extends BaseTag implements Tag {
     use Struct;
     public function getName()
     {
