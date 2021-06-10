@@ -143,6 +143,10 @@ class Tags {
         return new HtmlTags\TextContent\P($contains);
     }
 
+    static function Pre($contains = false) {
+        return new HtmlTags\TextContent\Pre($contains);
+    }
+
     // ImageAndMultimedia
 
     static function Img($src = false, $alt = false) {
