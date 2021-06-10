@@ -119,6 +119,10 @@ class Tags {
         return new HtmlTags\TextContent\Dt();
     }
 
+    static function Figcaption() {
+        return new HtmlTags\TextContent\Figcaption();
+    }
+
     // ImageAndMultimedia
 
     static function Img($src = false, $alt = false) {
