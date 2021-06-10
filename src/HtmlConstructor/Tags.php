@@ -5,6 +5,10 @@ use HtmlConstructor\Tags as HtmlTags;
 
 class Tags {
 
+    static function Html() {
+        return new HtmlTags\Html();
+    }
+
     //Metadata
 
     static function Base($href = false) {

@@ -4,6 +4,21 @@ use PHPUnit\Framework\TestCase;
 
 
 class TagTest extends TestCase {
+    public function testHtml() {
+        $lang = "en";
+        $render = sprintf('<html lang="%s"></html>', $lang);
+        $this->assertSame(
+            (new Tags\Html())->lang($lang)->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\Html())->lang($lang)->render(),
+            Tags::Html()->lang($lang)->render()
+        );
+    }
+
+
     public function testDivTag() {
         $html = (new Tags\TextContent\Div())
             ->style("color: red; background: #000")
