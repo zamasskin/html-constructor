@@ -7,29 +7,29 @@ use HtmlConstructor\Tag;
 use HtmlConstructor\Traits\Size;
 
 class Img extends BaseTag implements Tag {
-    const CROSSORIGIN_ANONYMOUS = "anonymous";
-    const CROSSORIGIN_USE_CREDENTIALS = "use-credentials";
+    static $CROSSORIGIN_ANONYMOUS = "anonymous";
+    static $CROSSORIGIN_USE_CREDENTIALS = "use-credentials";
 
-    const DECODING_SYNC = "sync";
-    const DECODING_ASYNC = "async";
-    const DECODING_AUTO = "auto";
+    static $DECODING_SYNC = "sync";
+    static $DECODING_ASYNC = "async";
+    static $DECODING_AUTO = "auto";
 
-    const IMPORTANCE_AUTO = "auto";
-    const IMPORTANCE_HIGH = "high";
-    const IMPORTANCE_LOW = "low";
+    static $IMPORTANCE_AUTO = "auto";
+    static $IMPORTANCE_HIGH = "high";
+    static $IMPORTANCE_LOW = "low";
 
-    const REFERRERPOLICY_NO_REFERRER = "no-referrer";
-    const REFERRERPOLICY_NO_REFERRER_WHEN_DOWNGRADE = "no-referrer-when-downgrade";
-    const REFERRERPOLICY_ORIGIN = "origin";
-    const REFERRERPOLICY_ORIGIN_WHEN_CROSS_ORIGIN = "origin-when-cross-origin";
-    const REFERRERPOLICY_UNSAFE_URL = "unsafe-url";
+    static $REFERRERPOLICY_NO_REFERRER = "no-referrer";
+    static $REFERRERPOLICY_NO_REFERRER_WHEN_DOWNGRADE = "no-referrer-when-downgrade";
+    static $REFERRERPOLICY_ORIGIN = "origin";
+    static $REFERRERPOLICY_ORIGIN_WHEN_CROSS_ORIGIN = "origin-when-cross-origin";
+    static $REFERRERPOLICY_UNSAFE_URL = "unsafe-url";
 
 
-    const ALIGN_TOP = "top";
-    const ALIGN_MIDDLE = "middle";
-    const ALIGN_BOTTOM = "bottom";
-    const ALIGN_LEFT = "left";
-    const ALIGN_RIGHT = "right";
+    static $ALIGN_TOP = "top";
+    static $ALIGN_MIDDLE = "middle";
+    static $ALIGN_BOTTOM = "bottom";
+    static $ALIGN_LEFT = "left";
+    static $ALIGN_RIGHT = "right";
 
     use Size;
     /**
@@ -77,7 +77,7 @@ class Img extends BaseTag implements Tag {
 
     /**
      * Set crossorigin attribute
-     * @param self::CROSSORIGIN_*|string $crossorigin
+     * @param self::$CROSSORIGIN_*|string $crossorigin
      * @return $this
      */
     function crossorigin($crossorigin) {
@@ -88,7 +88,7 @@ class Img extends BaseTag implements Tag {
 
     /**
      * Set decoding attribute
-     * @param self::DECODING_*|string $decoding
+     * @param self::$DECODING_*|string $decoding
      * @return $this
      */
     function decoding($decoding) {
@@ -98,7 +98,7 @@ class Img extends BaseTag implements Tag {
 
     /**
      * Set importance attribute
-     * @param self::IMPORTANCE_*|string $importance
+     * @param self::$IMPORTANCE_*|string $importance
      * @return $this
      */
     function importance($importance) {
@@ -129,7 +129,7 @@ class Img extends BaseTag implements Tag {
 
     /**
      * Set referrerpolicy attribute
-     * @param self::REFERRERPOLICY_*|string $referrerpolicy
+     * @param self::$REFERRERPOLICY_*|string $referrerpolicy
      * @return $this
      */
     function referrerpolicy($referrerpolicy) {
@@ -171,7 +171,7 @@ class Img extends BaseTag implements Tag {
 
     /**
      * Set align attribute
-     * @param self::ALIGN_*|string $align
+     * @param self::$ALIGN_*|string $align
      * @return $this
      */
     function _align($align) {
