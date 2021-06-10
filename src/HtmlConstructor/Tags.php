@@ -127,6 +127,10 @@ class Tags {
         return new HtmlTags\TextContent\Figure();
     }
 
+    static function Hr() {
+        return new HtmlTags\TextContent\Hr();
+    }
+
     // ImageAndMultimedia
 
     static function Img($src = false, $alt = false) {

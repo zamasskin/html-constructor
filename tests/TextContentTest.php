@@ -54,4 +54,10 @@ class TextContentTest extends TestCase {
         $this->assertSame((new Tags\TextContent\Figure())->render(), $render);
         $this->assertSame((new Tags\TextContent\Figure())->render(), Tags::Figure()->render());
     }
+
+    public function testHr() {
+        $render = '<hr />';
+        $this->assertSame((new Tags\TextContent\Hr())->render(), $render);
+        $this->assertSame((new Tags\TextContent\Hr())->render(), Tags::Hr()->render());
+    }
 }
