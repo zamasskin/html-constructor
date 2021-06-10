@@ -147,6 +147,11 @@ class Tags {
         return new HtmlTags\TextContent\Pre($contains);
     }
 
+    static function Ul() {
+        return new HtmlTags\TextContent\Ul();
+    }
+
+
     // ImageAndMultimedia
 
     static function Img($src = false, $alt = false) {

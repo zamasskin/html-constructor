@@ -94,4 +94,10 @@ class TextContentTest extends TestCase {
         $this->assertSame((new Tags\TextContent\Pre($contains))->render(), $render);
         $this->assertSame((new Tags\TextContent\Pre($contains))->render(), Tags::Pre($contains)->render());
     }
+
+    public function testUl() {
+        $render = '<ul></ul>';
+        $this->assertSame((new Tags\TextContent\Ul())->render(), $render);
+        $this->assertSame((new Tags\TextContent\Ul())->render(), Tags::Ul()->render());
+    }
 }
