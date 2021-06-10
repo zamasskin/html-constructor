@@ -5,12 +5,12 @@ use PHPUnit\Framework\TestCase;
 
 class TagTest extends TestCase {
     public function testDivTag() {
-        $html = (new Tags\Div())
+        $html = (new Tags\TextContent\Div())
             ->style("color: red; background: #000")
             ->className("parent")
             ->children([
-                (new Tags\Div())->className("one"),
-                (new Tags\Div())->className("two"),
+                (new Tags\TextContent\Div())->className("one"),
+                (new Tags\TextContent\Div())->className("two"),
             ]);
         $render = '<div style="color: red; background: #000" class="parent"><div class="one"></div><div class="two"></div></div>';
         $this->assertSame($html->render(), $render);
@@ -22,11 +22,11 @@ class TagTest extends TestCase {
         $render = sprintf('<img src="%s" alt="%s" />', $src, $alt);
 
         $this->assertSame(
-            (new Tags\Img())->src($src)->alt($alt)->render(),
+            (new Tags\ImageAndMultimedia\Img())->src($src)->alt($alt)->render(),
             $render
         );
         $this->assertSame(
-            (new Tags\Img($src, $alt))->render(),
+            (new Tags\ImageAndMultimedia\Img($src, $alt))->render(),
             $render
         );
     }
@@ -34,14 +34,14 @@ class TagTest extends TestCase {
 
     public function testBaseTag() {
         $href = "/test/";
-        $target = Tags\Base::$TARGET_BLANK;
+        $target = Tags\Metadata\Base::$TARGET_BLANK;
         $render = sprintf('<base href="%s" target="%s" />', $href, $target);
         $this->assertSame(
-            (new Tags\Base())->href($href)->target($target)->render(),
+            (new Tags\Metadata\Base())->href($href)->target($target)->render(),
             $render
         );
         $this->assertSame(
-            (new Tags\Base($href))->target($target)->render(),
+            (new Tags\Metadata\Base($href))->target($target)->render(),
             $render
         );
     }
@@ -51,12 +51,12 @@ class TagTest extends TestCase {
         $rel = "stylesheet";
         $render = sprintf('<link href="%s" rel="%s" />', $href, $rel);
         $this->assertSame(
-            (new Tags\Link())->href($href)->rel($rel)->render(),
+            (new Tags\Metadata\Link())->href($href)->rel($rel)->render(),
             $render
         );
 
         $this->assertSame(
-            (new Tags\Link($href, $rel))->render(),
+            (new Tags\Metadata\Link($href, $rel))->render(),
             $render
         );
     }

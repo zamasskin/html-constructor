@@ -1,6 +1,6 @@
 <?php
 
-namespace HtmlConstructor\Tags;
+namespace HtmlConstructor\Tags\ImageAndMultimedia;
 
 use HtmlConstructor\BaseTag;
 use HtmlConstructor\Tag;

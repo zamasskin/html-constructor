@@ -1,6 +1,6 @@
 <?php
 
-namespace HtmlConstructor\Tags;
+namespace HtmlConstructor\Tags\Metadata;
 
 use HtmlConstructor\BaseTag;
 use HtmlConstructor\Tag;
