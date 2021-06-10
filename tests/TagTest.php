@@ -18,6 +18,20 @@ class TagTest extends TestCase {
         );
     }
 
+    public function testBody() {
+        $lang = "en";
+        $render = '<body></body>';
+        $this->assertSame(
+            (new Tags\Body())->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\Body())->render(),
+            Tags::Body()->render()
+        );
+    }
+
 
     public function testDivTag() {
         $html = (new Tags\TextContent\Div())

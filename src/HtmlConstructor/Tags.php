@@ -9,6 +9,10 @@ class Tags {
         return new HtmlTags\Html();
     }
 
+    static function Body() {
+        return new HtmlTags\Body();
+    }
+
     //Metadata
 
     static function Base($href = false) {
