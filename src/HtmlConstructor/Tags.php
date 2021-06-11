@@ -151,6 +151,12 @@ class Tags {
         return new HtmlTags\TextContent\Ul();
     }
 
+    // InlineTextSemantics
+
+    static function A($href = false, $contains = false) {
+        return new HtmlTags\InlineTextSemantics\A($href, $contains);
+    }
+
 
     // ImageAndMultimedia
 
