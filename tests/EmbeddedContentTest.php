@@ -89,4 +89,25 @@ class EmbeddedContentTest extends TestCase {
             Tags::Portal($src)->render()
         );
     }
+
+    public function testSource() {
+        $src = "flower.webm";
+        $type = "video/webm";
+        $render = sprintf('<source src="%s" type="%s" />', $src, $type);
+
+        $this->assertSame(
+            (new Tags\EmbeddedContent\Source())->src($src)->type($type)->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\EmbeddedContent\Source($src, $type))->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\EmbeddedContent\Source($src, $type))->render(),
+            Tags::Source($src, $type)->render()
+        );
+    }
 }

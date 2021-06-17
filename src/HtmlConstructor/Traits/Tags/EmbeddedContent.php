@@ -23,4 +23,8 @@ trait EmbeddedContent {
     static function Portal($src = false) {
         return new HtmlTags\EmbeddedContent\Portal($src);
     }
+
+    static function Source($src = false, $type = false) {
+        return new HtmlTags\EmbeddedContent\Source($src, $type);
+    }
 }
