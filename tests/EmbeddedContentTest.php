@@ -36,4 +36,24 @@ class EmbeddedContentTest extends TestCase {
             Tags::Iframe($src)->render()
         );
     }
+
+    public function testParam() {
+        $name = "name";
+        $value = "value";
+        $render = sprintf('<param name="%s" value="%s" />', $name, $value);
+        $this->assertSame(
+            (new Tags\EmbeddedContent\Param())->name($name)->value($value)->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\EmbeddedContent\Param($name, $value))->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\EmbeddedContent\Param($name, $value))->render(),
+            Tags::Param($name, $value)->render()
+        );
+    }
 }
