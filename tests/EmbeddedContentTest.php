@@ -56,4 +56,17 @@ class EmbeddedContentTest extends TestCase {
             Tags::Param($name, $value)->render()
         );
     }
+
+    public function testPicture() {
+        $render = '<picture></picture>';
+        $this->assertSame(
+            (new Tags\EmbeddedContent\Picture())->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\EmbeddedContent\Picture())->render(),
+            Tags::Picture()->render()
+        );
+    }
 }

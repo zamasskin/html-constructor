@@ -15,4 +15,8 @@ trait EmbeddedContent {
     static function Param($name = false, $value = false) {
         return new HtmlTags\EmbeddedContent\Param($name, $value);
     }
+
+    static function Picture() {
+        return new HtmlTags\EmbeddedContent\Picture();
+    }
 }
