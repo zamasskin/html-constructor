@@ -10,6 +10,7 @@ class Tags {
     use TraitTags\TextContent;
     use TraitTags\InlineTextSemantics;
     use TraitTags\ImageAndMultimedia;
+    use TraitTags\EmbeddedContent;
 
     static function Html() {
         return new HtmlTags\Html();
