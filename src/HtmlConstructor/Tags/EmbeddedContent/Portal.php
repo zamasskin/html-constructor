@@ -13,6 +13,10 @@ class Portal extends BaseTag implements Tag {
         return "portal";
     }
 
+    /**
+     * Portal constructor.
+     * @param false|string $src
+     */
     public function __construct($src = false)
     {
         if(gettype($src) === "string" && strlen($src) > 0) {
