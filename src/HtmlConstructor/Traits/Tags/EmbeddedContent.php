@@ -19,4 +19,8 @@ trait EmbeddedContent {
     static function Picture() {
         return new HtmlTags\EmbeddedContent\Picture();
     }
+
+    static function Portal($src = false) {
+        return new HtmlTags\EmbeddedContent\Portal($src);
+    }
 }

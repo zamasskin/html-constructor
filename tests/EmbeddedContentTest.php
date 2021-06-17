@@ -69,4 +69,24 @@ class EmbeddedContentTest extends TestCase {
             Tags::Picture()->render()
         );
     }
+
+    public function testPortal() {
+        $src = "https://example.com/";
+        $render = sprintf('<portal src="%s"></portal>', $src);
+
+        $this->assertSame(
+            (new Tags\EmbeddedContent\Portal())->src($src)->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\EmbeddedContent\Portal($src))->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\EmbeddedContent\Portal($src))->render(),
+            Tags::Portal($src)->render()
+        );
+    }
 }
