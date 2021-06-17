@@ -45,7 +45,7 @@ abstract class BaseTag implements Tag {
      * @return string attribute string
      */
     private function mapAttribute($name, $value) {
-        return implode("", [$name, '=', '"', $value, '"']);
+        return $value !== NULL ?  implode("", [$name, '=', '"', $value, '"']) : $name;
     }
 
     /**
