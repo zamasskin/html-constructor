@@ -7,4 +7,8 @@ trait EmbeddedContent {
     static function Embed() {
         return new HtmlTags\EmbeddedContent\Embed();
     }
+
+    static function Iframe($src = false) {
+        return new HtmlTags\EmbeddedContent\Iframe($src);
+    }
 }

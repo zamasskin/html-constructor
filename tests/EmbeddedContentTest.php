@@ -17,4 +17,23 @@ class EmbeddedContentTest extends TestCase {
             Tags::Embed()->render()
         );
     }
+
+    public function testIframe() {
+        $src = "https://www.openstreetmap.org/";
+        $render = sprintf('<iframe src="%s"></iframe>', $src);
+        $this->assertSame(
+            (new Tags\EmbeddedContent\Iframe())->src($src)->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\EmbeddedContent\Iframe($src))->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\EmbeddedContent\Iframe($src))->render(),
+            Tags::Iframe($src)->render()
+        );
+    }
 }
