@@ -110,4 +110,24 @@ class EmbeddedContentTest extends TestCase {
             Tags::Source($src, $type)->render()
         );
     }
+
+    public function testObject() {
+        $data = "movie.swf";
+        $type = "application/x-shockwave-flash";
+        $render = sprintf('<object data="%s" type="%s"></object>', $data, $type);
+        $this->assertSame(
+            (new Tags\EmbeddedContent\ObjectTag())->data($data)->type($type)->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\EmbeddedContent\ObjectTag($data, $type))->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\EmbeddedContent\ObjectTag($data, $type))->render(),
+            Tags::Object($data, $type)->render()
+        );
+    }
 }

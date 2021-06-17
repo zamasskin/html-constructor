@@ -27,4 +27,8 @@ trait EmbeddedContent {
     static function Source($src = false, $type = false) {
         return new HtmlTags\EmbeddedContent\Source($src, $type);
     }
+
+    static function Object($data = false, $type = false) {
+        return new HtmlTags\EmbeddedContent\ObjectTag($data, $type);
+    }
 }
