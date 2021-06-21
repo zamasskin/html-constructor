@@ -16,4 +16,8 @@ trait TableContent {
     static function Tbody() {
         return new HtmlTags\TableContent\Tbody();
     }
+
+    static function Tfoot() {
+        return new HtmlTags\TableContent\Tfoot();
+    }
 }
