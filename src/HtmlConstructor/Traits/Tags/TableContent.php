@@ -32,4 +32,8 @@ trait TableContent {
     static function Th() {
         return new HtmlTags\TableContent\Th();
     }
+
+    static function Caption() {
+        return new HtmlTags\TableContent\Caption();
+    }
 }

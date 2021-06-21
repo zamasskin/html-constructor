@@ -93,4 +93,17 @@ class TableContentTest extends TestCase{
             Tags::Th()->render()
         );
     }
+
+    public function testCaption() {
+        $render = "<caption></caption>";
+        $this->assertSame(
+            (new Tags\TableContent\Caption())->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\TableContent\Caption())->render(),
+            Tags::Caption()->render()
+        );
+    }
 }
