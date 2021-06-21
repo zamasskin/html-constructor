@@ -4,16 +4,6 @@ namespace HtmlConstructor\Traits;
 
 trait Input {
     /**
-     * Set accept attribute
-     * @param string $accept
-     * @return $this
-     */
-    function accept($accept) {
-        $this->arParams["attributes"]["accept"] = $accept;
-        return $this;
-    }
-
-    /**
      * Set autocomplete attribute
      * @param string $autocomplete
      * @return $this
