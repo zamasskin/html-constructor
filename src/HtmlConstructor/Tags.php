@@ -11,6 +11,7 @@ class Tags {
     use TraitTags\InlineTextSemantics;
     use TraitTags\ImageAndMultimedia;
     use TraitTags\EmbeddedContent;
+    use TraitTags\TableContent;
 
     static function Html() {
         return new HtmlTags\Html();
