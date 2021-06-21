@@ -40,4 +40,8 @@ trait TableContent {
     static function Col() {
         return new HtmlTags\TableContent\Col();
     }
+
+    static function Colgroup() {
+        return new HtmlTags\TableContent\Colgroup();
+    }
 }

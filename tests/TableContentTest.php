@@ -119,4 +119,17 @@ class TableContentTest extends TestCase{
             Tags::Col()->render()
         );
     }
+
+    public function testColgroup() {
+        $render = "<colgroup></colgroup>";
+        $this->assertSame(
+            (new Tags\TableContent\Colgroup())->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\TableContent\Colgroup())->render(),
+            Tags::Colgroup()->render()
+        );
+    }
 }
