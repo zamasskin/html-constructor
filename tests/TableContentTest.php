@@ -28,4 +28,17 @@ class TableContentTest extends TestCase{
             Tags::Thead()->render()
         );
     }
+
+    public function testTbody() {
+        $render = "<tbody></tbody>";
+        $this->assertSame(
+            (new Tags\TableContent\Tbody())->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\TableContent\Tbody())->render(),
+            Tags::Tbody()->render()
+        );
+    }
 }

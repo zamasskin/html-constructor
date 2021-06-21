@@ -12,4 +12,8 @@ trait TableContent {
     static function Thead() {
         return new HtmlTags\TableContent\Thead();
     }
+
+    static function Tbody() {
+        return new HtmlTags\TableContent\Tbody();
+    }
 }
