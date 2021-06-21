@@ -106,4 +106,17 @@ class TableContentTest extends TestCase{
             Tags::Caption()->render()
         );
     }
+
+    public function testCol() {
+        $render = "<col></col>";
+        $this->assertSame(
+            (new Tags\TableContent\Col())->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\TableContent\Col())->render(),
+            Tags::Col()->render()
+        );
+    }
 }

@@ -36,4 +36,8 @@ trait TableContent {
     static function Caption() {
         return new HtmlTags\TableContent\Caption();
     }
+
+    static function Col() {
+        return new HtmlTags\TableContent\Col();
+    }
 }
