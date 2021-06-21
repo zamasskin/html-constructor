@@ -67,4 +67,17 @@ class TableContentTest extends TestCase{
             Tags::Tr()->render()
         );
     }
+
+    public function testTd() {
+        $render = "<td></td>";
+        $this->assertSame(
+            (new Tags\TableContent\Td())->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\TableContent\Td())->render(),
+            Tags::Td()->render()
+        );
+    }
 }

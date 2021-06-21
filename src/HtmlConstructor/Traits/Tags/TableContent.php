@@ -24,4 +24,8 @@ trait TableContent {
     static function Tr() {
         return new HtmlTags\TableContent\Tr();
     }
+
+    static function Td() {
+        return new HtmlTags\TableContent\Td();
+    }
 }
