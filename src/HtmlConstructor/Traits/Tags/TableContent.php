@@ -20,4 +20,8 @@ trait TableContent {
     static function Tfoot() {
         return new HtmlTags\TableContent\Tfoot();
     }
+
+    static function Tr() {
+        return new HtmlTags\TableContent\Tr();
+    }
 }

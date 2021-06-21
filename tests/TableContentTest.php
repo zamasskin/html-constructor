@@ -54,4 +54,17 @@ class TableContentTest extends TestCase{
             Tags::Tfoot()->render()
         );
     }
+
+    public function testTr() {
+        $render = "<tr></tr>";
+        $this->assertSame(
+            (new Tags\TableContent\Tr())->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\TableContent\Tr())->render(),
+            Tags::Tr()->render()
+        );
+    }
 }
