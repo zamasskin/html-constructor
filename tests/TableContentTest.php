@@ -15,4 +15,17 @@ class TableContentTest extends TestCase{
             Tags::Table()->render()
         );
     }
+
+    public function testThead() {
+        $render = "<thead></thead>";
+        $this->assertSame(
+            (new Tags\TableContent\Thead())->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\TableContent\Thead())->render(),
+            Tags::Thead()->render()
+        );
+    }
 }
