@@ -80,4 +80,17 @@ class TableContentTest extends TestCase{
             Tags::Td()->render()
         );
     }
+
+    public function testTh() {
+        $render = "<th></th>";
+        $this->assertSame(
+            (new Tags\TableContent\Th())->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\TableContent\Th())->render(),
+            Tags::Th()->render()
+        );
+    }
 }
