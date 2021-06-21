@@ -12,6 +12,7 @@ class Tags {
     use TraitTags\ImageAndMultimedia;
     use TraitTags\EmbeddedContent;
     use TraitTags\TableContent;
+    use TraitTags\Forms;
 
     static function Html() {
         return new HtmlTags\Html();
