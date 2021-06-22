@@ -32,4 +32,8 @@ trait Forms {
     static function Meter($value = false) {
         return new HtmlTags\Forms\Meter($value);
     }
+
+    static function Optgroup($label = false) {
+        return new HtmlTags\Forms\Optgroup($label);
+    }
 }

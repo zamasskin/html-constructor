@@ -286,4 +286,12 @@ class FormsTest extends TestCase {
         );
     }
 
+    public function testOptgroup() {
+        $label = "myLabel";
+        $render = sprintf('<optgroup label="%s"></optgroup>', $label);
+        $this->assertSame((new Tags\Forms\Optgroup())->label($label)->render(), $render);
+        $this->assertSame((new Tags\Forms\Optgroup($label))->render(), $render);
+        $this->assertSame((new Tags\Forms\Optgroup($label))->render(), Tags::Optgroup($label)->render());
+    }
+
 }
