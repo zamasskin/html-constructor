@@ -28,4 +28,8 @@ trait Forms {
     static function Legend($contains = false) {
         return new HtmlTags\Forms\Legend($contains);
     }
+
+    static function Meter($value = false) {
+        return new HtmlTags\Forms\Meter($value);
+    }
 }

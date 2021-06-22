@@ -269,4 +269,21 @@ class FormsTest extends TestCase {
         $this->assertSame((new Tags\Forms\Legend($contains))->render(), $render);
         $this->assertSame((new Tags\Forms\Legend($contains))->render(), Tags::Legend($contains)->render());
     }
+
+    public function testMeter() {
+        $value = "customId";
+        $min = 1;
+        $max = 100;
+        $render = sprintf('<meter value="%s" min="%d" max="%d"></meter>', $value, $min, $max);
+        $this->assertSame(
+            (new Tags\Forms\Meter())->value($value)->min($min)->max($max)->render(),
+            $render
+        );
+        $this->assertSame((new Tags\Forms\Meter($value))->min($min)->max($max)->render(), $render);
+        $this->assertSame(
+            (new Tags\Forms\Meter($value))->min($min)->max($max)->render(),
+            Tags::Meter($value)->min($min)->max($max)->render()
+        );
+    }
+
 }
