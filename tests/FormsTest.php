@@ -229,4 +229,17 @@ class FormsTest extends TestCase {
         $this->assertSame((new Input\Week($name, $value))->render(), $render);
         $this->assertSame((new Input\Week($name, $value))->render(), TagsInput::Week($name, $value)->render());
     }
+
+    public function testButton() {
+        $contains = "click me";
+        $name = "myButton";
+        $type = Tags\Forms\Button::$TYPE_SUBMIT;
+        $render = sprintf('<button name="%s" type="%s">%s</button>', $name, $type, $contains);
+        $this->assertSame((new Tags\Forms\Button())->name($name)->type($type)->contains($contains)->render(), $render);
+        $this->assertSame((new Tags\Forms\Button($name, $contains))->type($type)->render(), $render);
+        $this->assertSame(
+            (new Tags\Forms\Button($name, $contains))->render(),
+            Tags::Button($name, $contains)->render()
+        );
+    }
 }

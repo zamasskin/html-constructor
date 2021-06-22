@@ -7,4 +7,8 @@ trait Forms {
     static function Form($action = false, $method = false) {
         return new HtmlTags\Forms\Form($action, $method);
     }
+
+    static function Button($name = false, $contains = false) {
+        return new HtmlTags\Forms\Button($name, $contains);
+    }
 }
