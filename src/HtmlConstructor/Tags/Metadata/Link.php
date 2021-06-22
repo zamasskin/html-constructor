@@ -6,9 +6,11 @@ namespace HtmlConstructor\Tags\Metadata;
 use HtmlConstructor\BaseTag;
 use HtmlConstructor\Tag;
 use HtmlConstructor\Traits\Download;
+use HtmlConstructor\Traits\Disabled;
 
 class Link extends BaseTag implements Tag {
     use Download;
+    use Disabled;
 
     /**
      * Link constructor.
@@ -120,16 +122,6 @@ class Link extends BaseTag implements Tag {
      */
     function type($type) {
         $this->arParams["attributes"]["type"] = $type;
-        return $this;
-    }
-
-    /**
-     * Set disabled attribute
-     * @param string $disabled
-     * @return $this
-     */
-    function disabled($disabled) {
-        $this->arParams["attributes"]["disabled"] = $disabled;
         return $this;
     }
 

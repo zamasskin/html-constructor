@@ -6,23 +6,15 @@ use HtmlConstructor\BaseTag;
 use HtmlConstructor\Tag;
 use HtmlConstructor\Traits\Struct;
 use HtmlConstructor\Traits\FromForm;
+use HtmlConstructor\Traits\Disabled;
 
 class Fieldset extends BaseTag implements Tag {
     use Struct;
     use FromForm;
+    use Disabled;
     public function getName()
     {
         return "fieldset";
-    }
-
-    /**
-     * Set disabled attribute
-     * @param string $disabled
-     * @return $this
-     */
-    function disabled($disabled) {
-        $this->arParams["attributes"]["disabled"] = $disabled;
-        return $this;
     }
 
     /**
