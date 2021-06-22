@@ -19,10 +19,10 @@ class ObjectTag extends BaseTag implements Tag {
 
     public function __construct($data = false, $type = false)
     {
-        if(gettype($data) === "string" && strlen($data) > 0) {
+        if($this->check($data)) {
             $this->arParams["attributes"]["data"] = $data;
         }
-        if(gettype($type) === "string" && strlen($type) > 0) {
+        if($this->check($type)) {
             $this->arParams["attributes"]["type"] = $type;
         }
         return $this;

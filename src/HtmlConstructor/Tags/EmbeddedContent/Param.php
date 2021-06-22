@@ -18,10 +18,10 @@ class Param extends BaseTag implements Tag {
      */
     public function __construct($name = false, $value = false)
     {
-        if(gettype($name) === "string" && strlen($name) > 0) {
+        if($this->check($name)) {
             $this->arParams["attributes"]["name"] = $name;
         }
-        if(gettype($value) === "string" && strlen($value) > 0) {
+        if($this->check($value)) {
             $this->arParams["attributes"]["value"] = $value;
         }
         return $this;

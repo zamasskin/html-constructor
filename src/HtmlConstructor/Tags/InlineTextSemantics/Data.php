@@ -17,10 +17,10 @@ class Data extends BaseTag implements Tag {
 
     public function __construct($value = false, $contains = false)
     {
-        if(gettype($value) === "string" && strlen($value) > 0) {
+        if($this->check($value)) {
             $this->arParams["attributes"]["value"] = $value;
         }
-        if(gettype($contains) === "string" && strlen($contains) > 0) {
+        if($this->check($contains)) {
             $this->arParams["contains"] = $contains;
         }
         return $this;

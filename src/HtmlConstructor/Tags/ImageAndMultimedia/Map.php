@@ -19,7 +19,7 @@ class Map extends BaseTag implements Tag {
      */
     public function __construct($name = false)
     {
-        if(gettype($name) === "string" && strlen($name) > 0) {
+        if($this->check($name)) {
             $this->arParams["attributes"]["name"] = $name;
         }
         return $this;

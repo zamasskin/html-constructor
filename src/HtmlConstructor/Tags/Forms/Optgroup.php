@@ -23,7 +23,7 @@ class Optgroup extends BaseTag implements Tag {
      */
     public function __construct($label = false)
     {
-        if(gettype($label) === "string" && strlen($label) > 0) {
+        if($this->check($label)) {
             $this->label($label);
         }
         return $this;

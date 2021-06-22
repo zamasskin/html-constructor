@@ -28,10 +28,10 @@ class Button extends BaseTag implements Tag {
      */
     public function __construct($name = false, $contains = false)
     {
-        if(gettype($name) === "string" && strlen($name) > 0) {
+        if($this->check($name)) {
             $this->name($name);
         }
-        if(gettype($contains) === "string" && strlen($contains) > 0) {
+        if($this->check($contains)) {
             $this->contains($contains);
         }
         return $this;

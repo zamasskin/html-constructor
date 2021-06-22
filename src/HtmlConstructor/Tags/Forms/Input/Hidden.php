@@ -21,10 +21,10 @@ class Hidden extends BaseTag implements Tag {
     public function __construct($name = false, $value = false)
     {
         $this->type("hidden");
-        if(gettype($name) === "string" && strlen($name) > 0) {
+        if($this->check($name)) {
             $this->name($name);
         }
-        if(gettype($value) === "string" && strlen($value) > 0) {
+        if($this->check($value)) {
             $this->value($value);
         }
         return $this;

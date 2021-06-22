@@ -24,7 +24,7 @@ class Meter extends BaseTag implements Tag {
      */
     public function __construct($value = false)
     {
-        if(gettype($value) === "string" && strlen($value) > 0) {
+        if($this->check($value)) {
             $this->value($value);
         }
         return $this;

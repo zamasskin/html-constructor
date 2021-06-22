@@ -19,7 +19,7 @@ class Blockquote extends BaseTag implements Tag {
      */
     public function __construct($cite = false)
     {
-        if(gettype($cite) === "string" && strlen($cite) > 0) {
+        if($this->check($cite)) {
             $this->arParams["attributes"]["cite"] = $cite;
         }
     }

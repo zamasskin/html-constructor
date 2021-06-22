@@ -19,7 +19,7 @@ class Legend extends BaseTag implements Tag {
      */
     public function __construct($contains = false)
     {
-        if(gettype($contains) === "string" && strlen($contains) > 0) {
+        if($this->check($contains)) {
             $this->contains($contains);
         }
         return $this;

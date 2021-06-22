@@ -14,7 +14,7 @@ trait Url {
      */
     function __construct($href = false)
     {
-        if(gettype($href) === "string" && strlen($href) > 0) {
+        if($this->check($href)) {
             $this->arParams["attributes"]["href"] = $href;
         }
 

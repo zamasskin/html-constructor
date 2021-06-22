@@ -19,7 +19,7 @@ class P extends BaseTag implements Tag {
      */
     function __construct($contains = false)
     {
-        if(gettype($contains) === "string" && strlen($contains) > 0) {
+        if($this->check($contains)) {
             $this->arParams["contains"] = $contains;
         }
         return $this;

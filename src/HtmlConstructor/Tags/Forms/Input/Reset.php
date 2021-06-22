@@ -21,7 +21,7 @@ class Reset extends BaseTag implements Tag {
     public function __construct($name = false)
     {
         $this->type("reset");
-        if(gettype($name) === "string" && strlen($name) > 0) {
+        if($this->check($name)) {
             $this->name($name);
         }
         return $this;

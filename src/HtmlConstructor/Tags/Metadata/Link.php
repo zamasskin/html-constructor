@@ -20,11 +20,11 @@ class Link extends BaseTag implements Tag {
      */
     function __construct($href=false, $rel=false)
     {
-        if(gettype($href) === "string" && strlen($href) > 0) {
+        if($this->check($href)) {
             $this->arParams["attributes"]["href"] = $href;
         }
 
-        if(gettype($rel) === "string" && strlen($rel) > 0) {
+        if($this->check($rel)) {
             $this->arParams["attributes"]["rel"] = $rel;
         }
         return $this;

@@ -29,11 +29,11 @@ class Img extends BaseTag implements Tag {
      */
     function __construct($src = false, $alt = false)
     {
-        if(gettype($src) === "string" && strlen($src) > 0) {
+        if($this->check($src)) {
             $this->arParams["attributes"]["src"] = $src;
         }
 
-        if(gettype($alt) === "string" && strlen($alt) > 0) {
+        if($this->check($alt)) {
             $this->arParams["attributes"]["alt"] = $alt;
         }
 

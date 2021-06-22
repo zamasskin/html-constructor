@@ -20,10 +20,10 @@ class Time extends BaseTag implements Tag {
      */
     function __construct($datetime = false, $contains = false)
     {
-        if(gettype($datetime) === "string" && strlen($datetime) > 0) {
+        if($this->check($datetime)) {
             $this->arParams["attributes"]["datetime"] = $datetime;
         }
-        if(gettype($contains) === "string" && strlen($contains) > 0) {
+        if($this->check($contains)) {
             $this->arParams["contains"] = $contains;
         }
         return $this;

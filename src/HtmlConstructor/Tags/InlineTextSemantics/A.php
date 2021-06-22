@@ -22,11 +22,11 @@ class A extends BaseTag implements Tag {
      */
     function __construct($href = false, $contains = false)
     {
-        if(gettype($href) === "string" && strlen($href) > 0) {
+        if($this->check($href)) {
             $this->arParams["attributes"]["href"] = $href;
         }
 
-        if(gettype($contains) === "string" && strlen($contains) > 0) {
+        if($this->check($contains)) {
             $this->arParams["contains"] = $contains;
         }
 

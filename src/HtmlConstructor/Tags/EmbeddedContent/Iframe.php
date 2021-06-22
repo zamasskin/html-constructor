@@ -21,7 +21,7 @@ class Iframe extends BaseTag implements Tag {
      */
     public function __construct($src = false)
     {
-        if(gettype($src) === "string" && strlen($src) > 0) {
+        if($this->check($src)) {
             $this->arParams["attributes"]["src"] = $src;
         }
         return $this;

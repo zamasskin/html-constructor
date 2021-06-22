@@ -15,10 +15,10 @@ class Source extends BaseTag implements Tag {
 
     public function __construct($src = false, $type = false)
     {
-        if(gettype($src) === "string" && strlen($src) > 0) {
+        if($this->check($src)) {
             $this->arParams["attributes"]["src"] = $src;
         }
-        if(gettype($type) === "string" && strlen($type) > 0) {
+        if($this->check($type)) {
             $this->arParams["attributes"]["type"] = $type;
         }
         return $this;

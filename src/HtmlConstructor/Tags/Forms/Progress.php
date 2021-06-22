@@ -20,10 +20,10 @@ class Progress extends BaseTag implements Tag {
      */
     public function __construct($value = false, $max = false)
     {
-        if($value !== false && $value !== NULL) {
+        if($this->check($value)) {
             $this->value($value);
         }
-        if($max !== false && $max !== NULL) {
+        if($this->check($max)) {
             $this->max($max);
         }
         return $this;

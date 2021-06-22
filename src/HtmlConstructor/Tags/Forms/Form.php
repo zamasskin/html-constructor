@@ -20,10 +20,10 @@ class Form extends BaseTag implements Tag {
      */
     public function __construct($action = false, $method = false)
     {
-        if(gettype($action) === "string" && strlen($action) > 0) {
+        if($this->check($action)) {
             $this->action($action);
         }
-        if(gettype($method) === "string" && strlen($method) > 0) {
+        if($this->check($method)) {
             $this->method($method);
         }
         return $this;
