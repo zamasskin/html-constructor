@@ -5,7 +5,7 @@ namespace HtmlConstructor\Traits;
 trait MinMaxForm {
     /**
      * Set max alt
-     * @param string $max
+     * @param int|float $max
      * @return $this
      */
     function max($max) {
@@ -15,7 +15,7 @@ trait MinMaxForm {
 
     /**
      * Set min alt
-     * @param string $min
+     * @param int|float $min
      * @return $this
      */
     function min($min) {
