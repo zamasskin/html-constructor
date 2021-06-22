@@ -36,4 +36,8 @@ trait Forms {
     static function Optgroup($label = false) {
         return new HtmlTags\Forms\Optgroup($label);
     }
+
+    static function Option($value = false, $contains = false) {
+        return new HtmlTags\Forms\Option($value, $contains);
+    }
 }

@@ -294,4 +294,11 @@ class FormsTest extends TestCase {
         $this->assertSame((new Tags\Forms\Optgroup($label))->render(), Tags::Optgroup($label)->render());
     }
 
+    public function testOption() {
+        $contains = "myText";
+        $value = "myValue";
+        $render = sprintf('<option value="%s">%s</option>', $value, $contains);
+        $this->assertSame((new Tags\Forms\Option())->value($value)->contains($contains)->render(), $render);
+    }
+
 }
