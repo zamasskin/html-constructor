@@ -4,6 +4,7 @@ namespace HtmlConstructor\Traits;
 
 trait Input {
     use FromForm;
+    use Disabled;
     /**
      * Set autocomplete attribute
      * @param string $autocomplete
@@ -21,15 +22,6 @@ trait Input {
      */
     function autofocus($autofocus) {
         $this->arParams["attributes"]["autofocus"] = $autofocus;
-        return $this;
-    }
-
-    /**
-     * Set disabled attribute
-     * @return $this
-     */
-    function disabled() {
-        $this->arParams["attributes"]["disabled"] = NULL;
         return $this;
     }
 
