@@ -4,8 +4,10 @@ namespace HtmlConstructor\Tags\ImageAndMultimedia;
 
 use HtmlConstructor\BaseTag;
 use HtmlConstructor\Tag;
+use HtmlConstructor\Traits\LabelAttribute;
 
 class Track extends BaseTag implements Tag {
+    use LabelAttribute;
     public function getName()
     {
         return "track";
@@ -23,16 +25,6 @@ class Track extends BaseTag implements Tag {
      */
     public function default() {
         $this->arParams["attributes"]["default"] = NULL;
-        return $this;
-    }
-
-    /**
-     * Set label attribute
-     * @param string $label
-     * @return $this
-     */
-    public function label($label) {
-        $this->arParams["attributes"]["label"] = $label;
         return $this;
     }
 

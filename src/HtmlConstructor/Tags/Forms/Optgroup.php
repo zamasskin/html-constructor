@@ -6,10 +6,12 @@ use HtmlConstructor\BaseTag;
 use HtmlConstructor\Tag;
 use HtmlConstructor\Traits\Struct;
 use HtmlConstructor\Traits\Disabled;
+use HtmlConstructor\Traits\LabelAttribute;
 
 class Optgroup extends BaseTag implements Tag {
     use Struct;
     use Disabled;
+    use LabelAttribute;
     public function getName()
     {
         return "optgroup";
@@ -26,15 +28,4 @@ class Optgroup extends BaseTag implements Tag {
         }
         return $this;
     }
-
-    /**
-     * Set label attribute
-     * @param string $label
-     * @return $this
-     */
-    function label($label) {
-        $this->arParams["attributes"]["label"] = $label;
-        return $this;
-    }
-
 }
