@@ -337,4 +337,16 @@ class FormsTest extends TestCase {
         );
     }
 
+    public function testTextarea() {
+        $contains = "myValue";
+        $name = "myTextarea";
+        $render = sprintf('<textarea name="%s">%s</textarea>', $name, $contains);
+        $this->assertSame((new Tags\Forms\Textarea())->name($name)->contains($contains)->render(), $render);
+        $this->assertSame((new Tags\Forms\Textarea($name, $contains))->render(), $render);
+        $this->assertSame(
+            (new Tags\Forms\Textarea($name, $contains))->render(),
+            Tags::Textarea($name, $contains)->render()
+        );
+    }
+
 }

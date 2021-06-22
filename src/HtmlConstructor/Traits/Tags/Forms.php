@@ -52,4 +52,8 @@ trait Forms {
     static function Select($name = false, $value = false) {
         return new HtmlTags\Forms\Select($name, $value);
     }
+
+    static function Textarea($name = false, $contains = false) {
+        return new HtmlTags\Forms\Textarea($name, $contains);
+    }
 }
