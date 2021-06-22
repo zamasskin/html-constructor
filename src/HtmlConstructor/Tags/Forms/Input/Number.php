@@ -5,9 +5,11 @@ namespace HtmlConstructor\Tags\Forms\Input;
 use HtmlConstructor\BaseTag;
 use HtmlConstructor\Tag;
 use HtmlConstructor\Traits\Input;
+use HtmlConstructor\Traits\MinMaxForm;
 
 class Number extends BaseTag implements Tag {
     use Input;
+    use MinMaxForm;
     public function getName()
     {
         return "input";
@@ -27,26 +29,6 @@ class Number extends BaseTag implements Tag {
         if(gettype($value) === "string" && strlen($value) > 0) {
             $this->value($value);
         }
-        return $this;
-    }
-
-    /**
-     * Set max alt
-     * @param string $max
-     * @return $this
-     */
-    function max($max) {
-        $this->arParams["attributes"]["max"] = $max;
-        return $this;
-    }
-
-    /**
-     * Set min alt
-     * @param string $min
-     * @return $this
-     */
-    function min($min) {
-        $this->arParams["attributes"]["min"] = $min;
         return $this;
     }
 
