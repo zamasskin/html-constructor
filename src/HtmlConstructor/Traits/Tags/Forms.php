@@ -48,4 +48,8 @@ trait Forms {
     static function Progress($value = false, $max = false) {
         return new HtmlTags\Forms\Progress($value, $max);
     }
+
+    static function Select($name = false, $value = false) {
+        return new HtmlTags\Forms\Select($name, $value);
+    }
 }

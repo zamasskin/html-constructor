@@ -325,4 +325,16 @@ class FormsTest extends TestCase {
         );
     }
 
+    public function testSelect() {
+        $value = "click me";
+        $name = "mySelect";
+        $render = sprintf('<select name="%s" value="%s"></select>', $name, $value);
+        $this->assertSame((new Tags\Forms\Select())->name($name)->value($value)->render(), $render);
+        $this->assertSame((new Tags\Forms\Select($name, $value))->render(), $render);
+        $this->assertSame(
+            (new Tags\Forms\Select($name, $value))->render(),
+            Tags::Select($name, $value)->render()
+        );
+    }
+
 }
