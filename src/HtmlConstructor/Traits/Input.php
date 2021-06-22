@@ -45,7 +45,7 @@ trait Input {
     }
 
     /**
-     * Set list name
+     * Set list attribute
      * @param string $list
      * @return $this
      */
@@ -55,7 +55,7 @@ trait Input {
     }
 
     /**
-     * Set readonly name
+     * Set readonly attribute
      * @param string $readonly
      * @return $this
      */
@@ -65,7 +65,7 @@ trait Input {
     }
 
     /**
-     * Set required name
+     * Set required attribute
      * @param string $required
      * @return $this
      */
@@ -75,7 +75,7 @@ trait Input {
     }
 
     /**
-     * Set value name
+     * Set value attribute
      * @param string $value
      * @return $this
      */
@@ -85,7 +85,7 @@ trait Input {
     }
 
     /**
-     * Set type name
+     * Set type attribute
      * @param string $type
      * @return $this
      */
