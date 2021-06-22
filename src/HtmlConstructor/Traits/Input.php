@@ -3,37 +3,7 @@
 namespace HtmlConstructor\Traits;
 
 trait Input {
-    use FromForm;
-    use Disabled;
-    /**
-     * Set autocomplete attribute
-     * @param string $autocomplete
-     * @return $this
-     */
-    function autocomplete($autocomplete) {
-        $this->arParams["attributes"]["autocomplete"] = $autocomplete;
-        return $this;
-    }
-
-    /**
-     * Set autofocus attribute
-     * @param string $autofocus
-     * @return $this
-     */
-    function autofocus($autofocus) {
-        $this->arParams["attributes"]["autofocus"] = $autofocus;
-        return $this;
-    }
-
-    /**
-     * Set attribute name
-     * @param string $name
-     * @return $this
-     */
-    function name($name) {
-        $this->arParams["attributes"]["name"] = $name;
-        return $this;
-    }
+    use ForInput;
 
     /**
      * Set list attribute
@@ -52,16 +22,6 @@ trait Input {
      */
     function readonly($readonly) {
         $this->arParams["attributes"]["readonly"] = $readonly;
-        return $this;
-    }
-
-    /**
-     * Set required attribute
-     * @param string $required
-     * @return $this
-     */
-    function required($required) {
-        $this->arParams["attributes"]["required"] = $required;
         return $this;
     }
 
