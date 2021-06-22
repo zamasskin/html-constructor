@@ -5,9 +5,11 @@ namespace HtmlConstructor\Tags\Forms\Input;
 use HtmlConstructor\BaseTag;
 use HtmlConstructor\Tag;
 use HtmlConstructor\Traits\Input;
+use HtmlConstructor\Traits\MultipleAttribute;
 
 class Email extends BaseTag implements Tag {
     use Input;
+    use MultipleAttribute;
     public function getName()
     {
         return "input";
@@ -27,16 +29,6 @@ class Email extends BaseTag implements Tag {
         if(gettype($value) === "string" && strlen($value) > 0) {
             $this->value($value);
         }
-        return $this;
-    }
-
-    /**
-     * Set multiple alt
-     * @param string $multiple
-     * @return $this
-     */
-    function multiple($multiple) {
-        $this->arParams["attributes"]["multiple"] = $multiple;
         return $this;
     }
 

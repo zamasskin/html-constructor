@@ -5,9 +5,11 @@ namespace HtmlConstructor\Tags\Forms\Input;
 use HtmlConstructor\BaseTag;
 use HtmlConstructor\Tag;
 use HtmlConstructor\Traits\Input;
+use HtmlConstructor\Traits\MultipleAttribute;
 
 class File extends BaseTag implements Tag {
     use Input;
+    use MultipleAttribute;
     public function getName()
     {
         return "input";
@@ -47,16 +49,6 @@ class File extends BaseTag implements Tag {
      */
     function capture($capture) {
         $this->arParams["attributes"]["capture"] = $capture;
-        return $this;
-    }
-
-    /**
-     * Set multiple alt
-     * @param string $multiple
-     * @return $this
-     */
-    function multiple($multiple) {
-        $this->arParams["attributes"]["multiple"] = $multiple;
         return $this;
     }
 }
