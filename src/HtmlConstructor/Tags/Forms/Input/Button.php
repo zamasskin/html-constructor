@@ -5,9 +5,11 @@ namespace HtmlConstructor\Tags\Forms\Input;
 use HtmlConstructor\BaseTag;
 use HtmlConstructor\Tag;
 use HtmlConstructor\Traits\Input;
+use HtmlConstructor\Traits\FormButtonAndImage;
 
 class Button extends BaseTag implements Tag {
     use Input;
+    use FormButtonAndImage;
     public function getName()
     {
         return "input";

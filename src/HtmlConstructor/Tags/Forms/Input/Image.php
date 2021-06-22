@@ -5,9 +5,11 @@ namespace HtmlConstructor\Tags\Forms\Input;
 use HtmlConstructor\BaseTag;
 use HtmlConstructor\Tag;
 use HtmlConstructor\Traits\Input;
+use HtmlConstructor\Traits\FormButtonAndImage;
 
 class Image extends BaseTag implements Tag {
     use Input;
+    use FormButtonAndImage;
     public function getName()
     {
         return "input";
@@ -40,55 +42,6 @@ class Image extends BaseTag implements Tag {
         return $this;
     }
 
-    /**
-     * Set formaction attribute
-     * @param string $formaction
-     * @return $this
-     */
-    function formaction($formaction) {
-        $this->arParams["attributes"]["formaction"] = $formaction;
-        return $this;
-    }
-
-    /**
-     * Set formenctype attribute
-     * @param string $formenctype
-     * @return $this
-     */
-    function formenctype($formenctype) {
-        $this->arParams["attributes"]["formenctype"] = $formenctype;
-        return $this;
-    }
-
-    /**
-     * Set formmethod attribute
-     * @param string $formmethod
-     * @return $this
-     */
-    function formmethod($formmethod) {
-        $this->arParams["attributes"]["formmethod"] = $formmethod;
-        return $this;
-    }
-
-    /**
-     * Set formnovalidate attribute
-     * @param string $formnovalidate
-     * @return $this
-     */
-    function formnovalidate($formnovalidate) {
-        $this->arParams["attributes"]["formnovalidate"] = $formnovalidate;
-        return $this;
-    }
-
-    /**
-     * Set formtarget attribute
-     * @param string $formtarget
-     * @return $this
-     */
-    function formtarget($formtarget) {
-        $this->arParams["attributes"]["formtarget"] = $formtarget;
-        return $this;
-    }
 
     /**
      * Set width attribute
