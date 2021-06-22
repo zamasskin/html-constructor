@@ -5,6 +5,10 @@ namespace HtmlConstructor;
 abstract class BaseTag implements Tag {
     protected $arParams = array();
 
+    protected function check($name) {
+        return $name !== false && $name !== NULL;
+    }
+
     /**
      * Set class name
      * @param string $name
