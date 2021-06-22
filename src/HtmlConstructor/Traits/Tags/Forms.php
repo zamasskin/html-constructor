@@ -11,4 +11,9 @@ trait Forms {
     static function Button($name = false, $contains = false) {
         return new HtmlTags\Forms\Button($name, $contains);
     }
+
+
+    static function Datalist() {
+        return new HtmlTags\Forms\Datalist();
+    }
 }

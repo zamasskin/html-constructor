@@ -242,4 +242,10 @@ class FormsTest extends TestCase {
             Tags::Button($name, $contains)->render()
         );
     }
+
+    public function testDatalist() {
+        $render = "<datalist></datalist>";
+        $this->assertSame((new Tags\Forms\Datalist())->render(), $render);
+        $this->assertSame((new Tags\Forms\Datalist())->render(), Tags::Datalist()->render());
+    }
 }
