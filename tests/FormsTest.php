@@ -313,4 +313,16 @@ class FormsTest extends TestCase {
         );
     }
 
+    public function testProgress() {
+        $value = "70";
+        $max = "100";
+        $render = sprintf('<progress value="%s" max="%s"></progress>', $value, $max);
+        $this->assertSame((new Tags\Forms\Progress())->value($value)->max($max)->render(), $render);
+        $this->assertSame((new Tags\Forms\Progress($value, $max))->render(), $render);
+        $this->assertSame(
+            (new Tags\Forms\Progress($value, $max))->render(),
+            Tags::Progress($value, $max)->render()
+        );
+    }
+
 }

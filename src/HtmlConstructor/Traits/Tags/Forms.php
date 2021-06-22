@@ -44,4 +44,8 @@ trait Forms {
     static function Output($name = false, $contains = false) {
         return new HtmlTags\Forms\Output($name, $contains);
     }
+
+    static function Progress($value = false, $max = false) {
+        return new HtmlTags\Forms\Progress($value, $max);
+    }
 }
