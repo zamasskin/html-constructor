@@ -24,4 +24,8 @@ trait Forms {
     static function Label() {
         return new HtmlTags\Forms\Label();
     }
+
+    static function Legend($contains = false) {
+        return new HtmlTags\Forms\Legend($contains);
+    }
 }

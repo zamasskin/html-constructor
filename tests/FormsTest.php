@@ -261,4 +261,12 @@ class FormsTest extends TestCase {
         $this->assertSame((new Tags\Forms\Label())->for($for)->render(), $render);
         $this->assertSame((new Tags\Forms\Label())->render(), Tags::Label()->render());
     }
+
+    public function testLegend() {
+        $contains = "click me";
+        $render = sprintf('<legend>%s</legend>', $contains);
+        $this->assertSame((new Tags\Forms\Legend())->contains($contains)->render(), $render);
+        $this->assertSame((new Tags\Forms\Legend($contains))->render(), $render);
+        $this->assertSame((new Tags\Forms\Legend($contains))->render(), Tags::Legend($contains)->render());
+    }
 }
