@@ -248,4 +248,10 @@ class FormsTest extends TestCase {
         $this->assertSame((new Tags\Forms\Datalist())->render(), $render);
         $this->assertSame((new Tags\Forms\Datalist())->render(), Tags::Datalist()->render());
     }
+
+    public function testFieldset() {
+        $render = "<fieldset></fieldset>";
+        $this->assertSame((new Tags\Forms\Fieldset())->render(), $render);
+        $this->assertSame((new Tags\Forms\Fieldset())->render(), Tags::Fieldset()->render());
+    }
 }

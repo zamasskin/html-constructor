@@ -16,4 +16,8 @@ trait Forms {
     static function Datalist() {
         return new HtmlTags\Forms\Datalist();
     }
+
+    static function Fieldset() {
+        return new HtmlTags\Forms\Fieldset();
+    }
 }
