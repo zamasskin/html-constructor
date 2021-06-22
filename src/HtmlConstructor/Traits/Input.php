@@ -17,11 +17,10 @@ trait Input {
 
     /**
      * Set readonly attribute
-     * @param string $readonly
      * @return $this
      */
-    function readonly($readonly) {
-        $this->arParams["attributes"]["readonly"] = $readonly;
+    function readonly() {
+        $this->arParams["attributes"]["readonly"] = NULL;
         return $this;
     }
 
