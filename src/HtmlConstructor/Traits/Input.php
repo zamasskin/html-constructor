@@ -3,6 +3,7 @@
 namespace HtmlConstructor\Traits;
 
 trait Input {
+    use FromForm;
     /**
      * Set autocomplete attribute
      * @param string $autocomplete
@@ -32,17 +33,6 @@ trait Input {
         $this->arParams["attributes"]["disabled"] = $disabled;
         return $this;
     }
-
-    /**
-     * Set form attribute
-     * @param string $form
-     * @return $this
-     */
-    function form($form) {
-        $this->arParams["attributes"]["form"] = $form;
-        return $this;
-    }
-
 
     /**
      * Set attribute name

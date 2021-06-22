@@ -6,10 +6,12 @@ use HtmlConstructor\BaseTag;
 use HtmlConstructor\Tag;
 use HtmlConstructor\Traits\Size;
 use HtmlConstructor\Traits\Struct;
+use HtmlConstructor\Traits\FromForm;
 
 class ObjectTag extends BaseTag implements Tag {
     use Size;
     use Struct;
+    use FromForm;
     public function getName()
     {
         return "object";
@@ -46,15 +48,6 @@ class ObjectTag extends BaseTag implements Tag {
         return $this;
     }
 
-    /**
-     * Set form attribute
-     * @param string $form
-     * @return $this
-     */
-    function form($form) {
-        $this->arParams["attributes"]["form"] = $form;
-        return $this;
-    }
 
     /**
      * Set name attribute

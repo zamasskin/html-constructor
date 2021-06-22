@@ -5,9 +5,11 @@ namespace HtmlConstructor\Tags\Forms;
 use HtmlConstructor\BaseTag;
 use HtmlConstructor\Tag;
 use HtmlConstructor\Traits\Struct;
+use HtmlConstructor\Traits\FromForm;
 
 class Fieldset extends BaseTag implements Tag {
     use Struct;
+    use FromForm;
     public function getName()
     {
         return "fieldset";
@@ -30,16 +32,6 @@ class Fieldset extends BaseTag implements Tag {
      */
     function _name($name) {
         $this->arParams["attributes"]["name"] = $name;
-        return $this;
-    }
-
-    /**
-     * Set form attribute
-     * @param string $form
-     * @return $this
-     */
-    function form($form) {
-        $this->arParams["attributes"]["form"] = $form;
         return $this;
     }
 }
