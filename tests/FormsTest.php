@@ -301,4 +301,16 @@ class FormsTest extends TestCase {
         $this->assertSame((new Tags\Forms\Option())->value($value)->contains($contains)->render(), $render);
     }
 
+    public function testOutput() {
+        $contains = "myValue";
+        $name = "myOutput";
+        $render = sprintf('<output name="%s">%s</output>', $name, $contains);
+        $this->assertSame((new Tags\Forms\Output())->name($name)->contains($contains)->render(), $render);
+        $this->assertSame((new Tags\Forms\Output($name, $contains))->render(), $render);
+        $this->assertSame(
+            (new Tags\Forms\Output($name, $contains))->render(),
+            Tags::Output($name, $contains)->render()
+        );
+    }
+
 }

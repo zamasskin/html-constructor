@@ -40,4 +40,8 @@ trait Forms {
     static function Option($value = false, $contains = false) {
         return new HtmlTags\Forms\Option($value, $contains);
     }
+
+    static function Output($name = false, $contains = false) {
+        return new HtmlTags\Forms\Output($name, $contains);
+    }
 }
