@@ -26,11 +26,10 @@ trait Input {
 
     /**
      * Set disabled attribute
-     * @param string $disabled
      * @return $this
      */
-    function disabled($disabled) {
-        $this->arParams["attributes"]["disabled"] = $disabled;
+    function disabled() {
+        $this->arParams["attributes"]["disabled"] = NULL;
         return $this;
     }
 
