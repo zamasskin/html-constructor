@@ -20,4 +20,8 @@ trait Forms {
     static function Fieldset() {
         return new HtmlTags\Forms\Fieldset();
     }
+
+    static function Label() {
+        return new HtmlTags\Forms\Label();
+    }
 }

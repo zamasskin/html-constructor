@@ -254,4 +254,11 @@ class FormsTest extends TestCase {
         $this->assertSame((new Tags\Forms\Fieldset())->render(), $render);
         $this->assertSame((new Tags\Forms\Fieldset())->render(), Tags::Fieldset()->render());
     }
+
+    public function testLabel() {
+        $for = "customId";
+        $render = sprintf('<label for="%s"></label>', $for);
+        $this->assertSame((new Tags\Forms\Label())->for($for)->render(), $render);
+        $this->assertSame((new Tags\Forms\Label())->render(), Tags::Label()->render());
+    }
 }
