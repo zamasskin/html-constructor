@@ -42,4 +42,14 @@ $html = Tags::Div()->className("root")->children([
 
 echo $html->render();
 // <div class="root"><span class="caption">main caption</span><a href="http://example.com" class="link">main link</a></div>
+
+
+
+$html = (new Tags\Tag("custom"))->setAttribute("data", "test");
+echo $html->render();
+// <custom data="%test"></custom>
+
+$html = Tags::Tag("custom")->setAttribute("data", "test");
+echo $html->render();
+// <custom data="%test"></custom>
 ```
