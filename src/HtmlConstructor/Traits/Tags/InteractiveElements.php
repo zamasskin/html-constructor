@@ -11,4 +11,8 @@ trait InteractiveElements {
     static function Dialog() {
         return new HtmlTags\InteractiveElements\Dialog();
     }
+
+    static function Menu() {
+        return new HtmlTags\InteractiveElements\Menu();
+    }
 }

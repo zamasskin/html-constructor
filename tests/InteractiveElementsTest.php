@@ -29,4 +29,17 @@ class InteractiveElementsTest extends TestCase {
             Tags::Dialog()->open()->render()
         );
     }
+
+    public function testMenu() {
+        $render = '<menu></menu>';
+        $this->assertSame(
+            (new Tags\InteractiveElements\Menu())->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\InteractiveElements\Menu())->render(),
+            Tags::Menu()->render()
+        );
+    }
 }
