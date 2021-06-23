@@ -15,6 +15,7 @@ class Tags {
     use TraitTags\Forms;
     use TraitTags\Scripting;
     use TraitTags\InteractiveElements;
+    use TraitTags\DemarcatingEdits;
 
     static function Html() {
         return new HtmlTags\Html();
