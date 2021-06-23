@@ -3,7 +3,9 @@
 namespace HtmlConstructor;
 
 abstract class BaseTag implements Tag {
-    protected $arParams = array();
+    protected $arParams = array(
+        "attributes" => array()
+    );
 
     protected function check($name) {
         return $name !== false && $name !== NULL;
