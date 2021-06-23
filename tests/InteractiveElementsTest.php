@@ -42,4 +42,17 @@ class InteractiveElementsTest extends TestCase {
             Tags::Menu()->render()
         );
     }
+
+    public function testSummary() {
+        $render = '<summary></summary>';
+        $this->assertSame(
+            (new Tags\InteractiveElements\Summary())->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\InteractiveElements\Summary())->render(),
+            Tags::Summary()->render()
+        );
+    }
 }

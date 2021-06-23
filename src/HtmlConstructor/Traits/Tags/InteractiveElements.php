@@ -15,4 +15,8 @@ trait InteractiveElements {
     static function Menu() {
         return new HtmlTags\InteractiveElements\Menu();
     }
+
+    static function Summary() {
+        return new HtmlTags\InteractiveElements\Summary();
+    }
 }
