@@ -39,7 +39,6 @@ $html = Tags::Div()->className("root")->children([
     Tags::Span('main caption')->className("caption"),
     Tags::A('http://example.com', 'main link')->className("link")
 ]);
-
 echo $html->render();
 // <div class="root"><span class="caption">main caption</span><a href="http://example.com" class="link">main link</a></div>
 
