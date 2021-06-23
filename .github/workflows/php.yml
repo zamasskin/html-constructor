@@ -28,8 +28,8 @@ jobs:
 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
-    - name: Version
-      run: php -v
+    - name: Tests
+      run: php ./vendor/phpunit/phpunit/phpunit --no-configuration ./tests --teamcity --cache-result-file=/.phpunit.result.cache
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
