@@ -29,4 +29,20 @@ class ScriptingTest extends TestCase{
             Tags::Noscript()->render()
         );
     }
+
+    public function testCanvas() {
+        $width = "100%";
+        $height = 50;
+        $render = sprintf('<canvas width="%s" height="%d"></canvas>', $width, $height);
+        $this->assertSame(
+            (new Tags\Scripting\Canvas())->width($width)->height($height)->render(),
+            $render
+        );
+        $this->assertSame(
+            (new Tags\Scripting\Canvas())->render(),
+            Tags::Canvas()->render()
+        );
+    }
+
+
 }

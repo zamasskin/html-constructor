@@ -11,4 +11,8 @@ trait Scripting {
     static function Noscript() {
         return new HtmlTags\Scripting\Noscript();
     }
+
+    static function Canvas() {
+        return new HtmlTags\Scripting\Canvas();
+    }
 }
