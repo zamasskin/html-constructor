@@ -8,13 +8,13 @@ Install [composer](https://getcomposer.org/).
 Run the following in the root of your project:
 
 ```bash
-composer require zamasskin/html-constructor dev-master
+composer require zamasskin/html-constructor dev-main
 ```
 Or, create a composer.json file with the following contents and run "composer install":
 ```json
 {
   "require": {
-    "zamasskin/html-constructor": "dev-master"
+    "zamasskin/html-constructor": "dev-main"
   }
 }
 ```
