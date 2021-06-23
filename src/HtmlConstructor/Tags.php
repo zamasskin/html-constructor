@@ -22,4 +22,8 @@ class Tags {
     static function Body() {
         return new HtmlTags\Body();
     }
+
+    static function Tag($name) {
+        return new HtmlTags\Tag($name);
+    }
 }
