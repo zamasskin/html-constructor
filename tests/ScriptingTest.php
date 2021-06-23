@@ -17,4 +17,16 @@ class ScriptingTest extends TestCase{
             Tags::Script()->type($type)->contains($contains)->render()
         );
     }
+
+    public function testNoscript() {
+        $render = '<noscript></noscript>';
+        $this->assertSame(
+            (new Tags\Scripting\Noscript())->render(),
+            $render
+        );
+        $this->assertSame(
+            (new Tags\Scripting\Noscript())->render(),
+            Tags::Noscript()->render()
+        );
+    }
 }
