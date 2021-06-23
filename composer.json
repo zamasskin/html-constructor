@@ -3,6 +3,7 @@
     "description": "Html engine components",
     "type": "library",
     "license": "MIT",
+    "keywords": ["html", "constructor", "render"],
     "authors": [
         {
             "name": "Alexey Zamasskin",
@@ -20,10 +21,8 @@
             "HtmlConstructor": "src/"
         }
     },
-    "extra": {
-        "branch-alias": {
-            "dev-main": "1.0-dev"
-        }
+    "replace": {
+        "zamasskin/html-constructor": "self.version"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
