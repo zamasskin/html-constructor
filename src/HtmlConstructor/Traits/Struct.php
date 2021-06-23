@@ -43,16 +43,12 @@ trait Struct {
 
 
         $children = [];
-        if($this->arParams && (array_key_exists("children", $this->arParams) ||
-                array_key_exists("contains", $this->arParams))
-        ) {
-            if($this->arParams["children"] && count($this->arParams["children"]) > 0) {
-                foreach ($this->arParams["children"] as $child) {
-                    $children[] = $child->render();
-                }
-            } elseif ($this->arParams["contains"]) {
-                $children[] = $this->arParams["contains"];
+        if($this->arParams && array_key_exists("children", $this->arParams) && count($this->arParams["children"]) > 0) {
+            foreach ($this->arParams["children"] as $child) {
+                $children[] = $child->render();
             }
+        } elseif ($this->arParams && array_key_exists("contains", $this->arParams) && $this->arParams["contains"]) {
+            $children[] = $this->arParams["contains"];
         }
 
         return implode("", [
