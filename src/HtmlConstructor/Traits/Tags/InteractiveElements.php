@@ -7,4 +7,8 @@ trait InteractiveElements {
     static function Details() {
         return new HtmlTags\InteractiveElements\Details();
     }
+
+    static function Dialog() {
+        return new HtmlTags\InteractiveElements\Dialog();
+    }
 }

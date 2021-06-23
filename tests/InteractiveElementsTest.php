@@ -16,4 +16,17 @@ class InteractiveElementsTest extends TestCase {
             Tags::Details()->open()->render()
         );
     }
+
+    public function testDialog() {
+        $render = '<dialog open></dialog>';
+        $this->assertSame(
+            (new Tags\InteractiveElements\Dialog())->open()->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\InteractiveElements\Dialog())->open()->render(),
+            Tags::Dialog()->open()->render()
+        );
+    }
 }
