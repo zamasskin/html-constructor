@@ -3,7 +3,7 @@
     "description": "Html engine components",
     "type": "library",
     "license": "MIT",
-    "keywords": ["html", "constructor", "render"],
+    "keywords": ["html", "constructor", "render", "generate html", "templating"],
     "authors": [
         {
             "name": "Alexey Zamasskin",
