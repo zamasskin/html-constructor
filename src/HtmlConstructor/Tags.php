@@ -14,6 +14,7 @@ class Tags {
     use TraitTags\TableContent;
     use TraitTags\Forms;
     use TraitTags\Scripting;
+    use TraitTags\InteractiveElements;
 
     static function Html() {
         return new HtmlTags\Html();
