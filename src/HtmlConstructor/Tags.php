@@ -13,6 +13,7 @@ class Tags {
     use TraitTags\EmbeddedContent;
     use TraitTags\TableContent;
     use TraitTags\Forms;
+    use TraitTags\Scripting;
 
     static function Html() {
         return new HtmlTags\Html();
