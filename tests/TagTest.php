@@ -32,4 +32,18 @@ class TagTest extends TestCase {
         );
     }
 
+    public function testTag() {
+        $data = "test";
+        $render = sprintf('<custom data="%s"></custom>', $data);
+        $this->assertSame(
+            (new Tags\Tag("custom"))->setAttribute("data", $data)->render(),
+            $render
+        );
+
+        $this->assertSame(
+            (new Tags\Tag("custom"))->setAttribute("data", $data)->render(),
+            Tags::Tag("custom")->setAttribute("data", $data)->render()
+        );
+    }
+
 }
