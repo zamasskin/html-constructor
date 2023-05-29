@@ -3,7 +3,13 @@
     "description": "Html engine components",
     "type": "library",
     "license": "MIT",
-    "keywords": ["html", "constructor", "render", "generate html", "templating"],
+    "keywords": [
+        "html",
+        "constructor",
+        "render",
+        "generate html",
+        "templating"
+    ],
     "authors": [
         {
             "name": "Alexey Zamasskin",
@@ -20,9 +26,6 @@
         "psr-0": {
             "HtmlConstructor": "src/"
         }
-    },
-    "replace": {
-        "zamasskin/html-constructor": "self.version"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
